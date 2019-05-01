@@ -1,0 +1,387 @@
+/* css reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* box-sizing & font */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Microsoft JhengHei" !important;
+}
+
+/* -------------------------------------------- */
+/* layout */
+.wrap {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.header {
+  max-width: 100%;
+  height: 300px;
+  background-color: #424242;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+.footer {
+  height: 90px;
+  background: #ffd366;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* -------------------------------------------- */
+/* header */
+.header-img {
+  min-width: 35%;
+  margin-right: 97px;
+  text-align: right;
+}
+
+.header-form {
+  margin-right: 53px;
+  color: #ffd366;
+}
+
+.header-result {
+  width: 35%;
+}
+
+.result {
+  display: none;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 7px;
+}
+
+.form-control {
+  max-width: 250px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 2px solid #ffd366;
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.5);
+  text-indent: 1rem;
+}
+
+.form-control:focus {
+  outline: none;
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.resultBtn {
+  min-width: 120px;
+  min-height: 120px;
+  background-color: #ffd366;
+  border-radius: 50%;
+
+  box-shadow: none;
+  border: none;
+
+  cursor: pointer;
+}
+
+.resultBtn:hover {
+  background: #ffd366;
+  box-shadow: 0 1px 6px 3px rgba(255, 196, 50, 0.64);
+}
+
+.resultBtn:active {
+  background: #dea821;
+}
+
+.resultBtn:focus {
+  outline: none;
+}
+
+.bmiResult {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.bmiCycle {
+  min-width: 120px;
+  min-height: 120px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  position: relative;
+}
+
+.bmiCycle span {
+  margin-top: 7px;
+}
+
+.bmiCycle small {
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.bmiReset {
+  position: absolute;
+  right: -2px;
+  bottom: 0;
+
+  width: 33px;
+  height: 33px;
+  border: 3px solid #424242;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bmiReset:hover {
+  -webkit-transform: rotate(180deg);
+  transition: all 0.3s;
+}
+
+.bmiNumber {
+  display: block;
+  margin-left: 18px;
+}
+
+/* -------------------------------------------- */
+/* content */
+.bmiRecord {
+  padding-top: 48px;
+  padding-bottom: 58px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.bmiList {
+  width: 100%;
+  margin-top: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bmiItem {
+  width: 624px;
+  height: 62px;
+  background: #ffffff;
+  margin-bottom: 16px;
+
+  display: flex;
+  align-items: center;
+}
+.bmiColor {
+  display: inline-block;
+  width: 7px;
+  height: 62px;
+  box-shadow: 2px 0 3px 0 rgba(134, 215, 63, 0.29);
+}
+
+.bmiStatus {
+  width: 15%;
+  text-align: left;
+  padding-left: 12px;
+}
+
+.bmiSpace {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* 分配剩餘空間 */
+  flex-grow: 1;
+}
+
+.bmiSpace small {
+  margin-right: 7px;
+}
+
+.bmiDate {
+  width: 15%;
+}
+
+.clearRecordBtn {
+  text-decoration: none;
+  color: #FF6C03;
+}
+
+/* -------------------------------------------- */
+/* utilities */
+.text-hide {
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 0px;
+}
+
+.font-size-12 {
+  font-size: 12px;
+}
+.font-size-18 {
+  font-size: 18px;
+}
+.font-size-20 {
+  font-size: 20px;
+}
+.font-size-24 {
+  font-size: 24px;
+}
+.font-size-32 {
+  font-size: 32px;
+}
+
+.font-primary-color {
+  color: #4a4a4a;
+}
+
+.font-secondary-color {
+  color: #424242;
+}
+
+.text-weight-bold {
+  font-weight: bold;
+}
+
+/* 清除 number 的 arrows */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
