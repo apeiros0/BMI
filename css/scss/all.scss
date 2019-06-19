@@ -1,0 +1,14 @@
+@import "helpers/varables";
+
+@import "helpers/reset";
+
+@import "helpers/base";
+
+@import "helpers/mixin";
+
+// main CSS
+@import "components/layout";
+@import "components/header";
+@import "components/resultBtn";
+@import "components/resultBtnAfter";
+@import "components/content";

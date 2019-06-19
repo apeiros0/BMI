@@ -1,0 +1,21 @@
+// layout
+.wrap {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.header {
+  position: relative;
+  max-width: 100%;
+  height: 300px;
+  background-color: $dark;
+
+  @include flex-center;
+}
+
+.footer {
+  height: 90px;
+  background: $warning;
+
+  @include flex-center;
+}

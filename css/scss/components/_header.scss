@@ -1,0 +1,47 @@
+// header
+.header {
+  &-img {
+    min-width: 35%;
+    margin-right: 97px;
+    text-align: right;
+
+    h1 {
+      @include text-hide;
+    }
+  }
+
+  &-form {
+    margin-right: 53px;
+    color: $warning;
+  }
+
+  &-result {
+    width: 35%;
+  }
+}
+
+.form {
+  &-label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: $font-size-s;
+  }
+
+  &-control {
+    max-width: 250px;
+    background: rgba(255, 255, 255, 0.18);
+    border: 2px solid $warning;
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.5);
+    text-indent: 1rem;
+    font-size: $font-size-l;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+}

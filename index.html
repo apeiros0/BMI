@@ -17,7 +17,7 @@
     <meta property="og:image" content="images/BMICLogo.png">
     <meta name="format-detection" content="telephone=no" />
 
-    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/scss/all.css">
 </head>
 
 <body>
@@ -26,32 +26,32 @@
         <header class="header">
             <div class="header-img">
                 <img src="images/BMICLogo.png" alt="BMICLogo">
-                <h1 class="text-hide">BMI計算</h1>
+                <h1>BMI計算</h1>
             </div>
-
+            
             <form class="header-form">
                 <div class="form-group">
-                    <label for="inputHeight" class="form-label font-size-18">身高 cm</label>
-                    <input type="number" class="form-control font-size-24" id="inputHeight" aria-describedby="emailHelp"
+                    <label for="inputHeight" class="form-label">身高 cm</label>
+                    <input type="number" class="form-control" id="inputHeight" aria-describedby="emailHelp"
                         placeholder="請輸入身高">
                 </div>
                 <div class="form-group" style="margin-top: 23px;">
-                    <label for="inputWeight" class="form-label font-size-18">體重 kg</label>
-                    <input type="number" class="form-control font-size-24" id="inputWeight" placeholder="請輸入體重">
+                    <label for="inputWeight" class="form-label">體重 kg</label>
+                    <input type="number" class="form-control" id="inputWeight" placeholder="請輸入體重">
                 </div>
             </form>
 
             <div class="header-result">
-                <button class="resultBtn font-size-24 font-secondary-color text-weight-bold">看結果</button>
+                <button class="result-btn">看結果</button>
                 <div class="result"></div>
             </div>
         </header>
 
         <!-- content -->
-        <section class="bmiRecord">
-            <h2 class="font-size-24 font-secondary-color text-weight-bold">BMI 紀錄</h2>
-            <ul class="bmiList"></ul>
-            <a href="#" class="clearRecordBtn font-size-18 text-weight-bold">清除紀錄</a>
+        <section class="bmi-record">
+            <h2>BMI 紀錄</h2>
+            <ul class="bmi-list"></ul>
+            <a href="#" class="clear-record-btn">清除紀錄</a>
         </section>
 
         <!-- footer -->
