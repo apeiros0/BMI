@@ -1,15 +1,15 @@
-.result {
+.header-result-content {
   display: none;
 }
 
 .bmi {
-  &-result {
+  &Result {
     display: flex;
     align-items: center;
     justify-content: flex-start;
   }
 
-  &-cycle {
+  &Cycle {
     min-width: 120px;
     min-height: 120px;
     border-radius: 50%;
@@ -31,7 +31,7 @@
     }
   }
 
-  &-reset {
+  &Reset {
     position: absolute;
     right: -2px;
     bottom: 0;
@@ -49,7 +49,7 @@
     }
   }
 
-  &-number {
+  &Number {
     display: block;
     margin-left: 18px;
     font-size: $font-size-xl;

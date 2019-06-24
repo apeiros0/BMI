@@ -3,10 +3,10 @@
   const bmiData = JSON.parse(localStorage.getItem('BMIData')) || [];
   const inputHeight = document.querySelector('#inputHeight');
   const inputWeight = document.querySelector('#inputWeight');
-  const resultBtn = document.querySelector('.result-btn');
-  const bmiList = document.querySelector('.bmi-list');
-  const bmiResult = document.querySelector('.result');
-  const clearRecordBtn = document.querySelector('.clear-record-btn');
+  const resultBtn = document.querySelector('.header-result-btn');
+  const bmiList = document.querySelector('.bmiList');
+  const bmiResult = document.querySelector('.header-result-content');
+  const clearRecordBtn = document.querySelector('.clearRecord-btn');
 
   // 更新畫面
   function updateBMI() {
@@ -19,28 +19,28 @@
     // let cycleStr = '';
     for (let i = 0; i < bmiData.length; i += 1) {
       str += `
-    <li class="bmi-item">
-        <p class="bmi-color" style="background-color: ${bmiData[i].color};"></p>
+    <li class="bmiList-item">
+        <p class="bmiColor" style="background-color: ${bmiData[i].color};"></p>
 
-        <div class="bmi-status">
+        <div class="bmiStatus">
             <span>${bmiData[i].status}</span>
         </div>
-        <div class="bmi-space">
+        <div class="bmiSpace">
             <small>BMI</small>
             <span>${bmiData[i].bmi}</span>
         </div>
 
-        <div class="bmi-space">
+        <div class="bmiSpace">
             <small>weight</small>
             <span>${bmiData[i].weight} kg</span>
         </div>
 
-        <div class="bmi-space">
+        <div class="bmiSpace">
             <small>height</small>
             <span>${bmiData[i].height} cm</span>
         </div>
 
-        <div class="bmi-date">
+        <div class="bmiDate">
             <span>${bmiData[i].date}</span>
         </div>
     </li>`;
@@ -57,16 +57,16 @@
     let cycleStr = '';
     for (let i = 0; i < bmiData.length; i += 1) {
       cycleStr = `
-        <div class="bmi-result">
-            <div class="bmi-cycle" style="border: 6px solid ${bmiData[i].color};color: ${bmiData[i].color};">
+        <div class="bmiResult">
+            <div class="bmiCycle" style="border: 6px solid ${bmiData[i].color};color: ${bmiData[i].color};">
                 <span>${bmiData[i].bmi}</span>
                 <small>BMI</small>
-                <a href="#" class="bmi-reset" style="background-color: ${bmiData[i].color};">
+                <a href="#" class="bmiReset" style="background-color: ${bmiData[i].color};">
                     <img src="images/icons_loop.png" alt="icons_loop">
                 </a>
             </div>
 
-            <span class="bmi-number" style="color: ${bmiData[i].color};">${bmiData[i].status}</span>
+            <span class="bmiNumber" style="color: ${bmiData[i].color};">${bmiData[i].status}</span>
         </div>
         `;
     }
